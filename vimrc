@@ -108,8 +108,10 @@ set laststatus=2
 set statusline=%1*%m%*%2*%r%*%f%=\ Col:%3*%03v%*\ Ln:%3*%03l%*/%3*%03L%*\ File:%{&filetype}/%{&fileformat}/%{&fileencoding}\ Char:%04b/0x%03B%*%<
 
 set numberwidth=3
-set norelativenumber
 set nonumber
+if exists('&relativenumber')
+    set norelativenumber
+endif
 
 if has('gui_running') " {{{2
     set mouse=a
