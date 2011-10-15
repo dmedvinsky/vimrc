@@ -226,19 +226,23 @@ vnoremap <leader>a: :Tabularize /:\zs<CR>
 " }}}1
 
 " Plugins {{{1
-
 " Fugitive
-autocmd BufReadPost fugitive://* set bufhidden=delete
-autocmd User fugitive
-  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-  \   nnoremap <buffer> .. :edit %:h<CR> |
-  \ endif
-
+if has("autocmd")
+    augroup fugutiveAU
+        autocmd!
+        autocmd BufReadPost fugitive://* set bufhidden=delete
+        autocmd User fugitive
+          \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+          \     nnoremap <buffer> .. :edit %:h<CR> |
+          \ endif
+    augroup END
+endif
 " }}}1
 
 " Autocommands {{{1
 if has("autocmd")
     augroup FTOptions " {{{2
+        autocmd!
         autocmd FileType vim setlocal foldmethod=marker
         autocmd FileType sh setlocal foldmethod=marker
         autocmd FileType gitcommit setlocal spell
@@ -265,6 +269,7 @@ endfunction
 command! -nargs=1 OpenURL :call OpenURL(<q-args>)
 nnoremap gG :OpenURL https://encrypted.google.com/search?q=<cword><CR>
 " }}}
+
 
 if filereadable($HOME."/.vim/bundle/local/vimrc")
     set runtimepath+=$HOME/.vim/bundle/local/
