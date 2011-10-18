@@ -21,7 +21,6 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'vim-scripts/camelcasemotion'
 Bundle 'godlygeek/tabular'
-Bundle 'vim-scripts/matchit.zip.git'
 Bundle 'sjl/threesome.vim.git'
 
 Bundle 'kchmck/vim-coffee-script'
@@ -226,6 +225,8 @@ vnoremap <leader>a: :Tabularize /:\zs<CR>
 " }}}1
 
 " Plugins {{{1
+runtime macros/matchit.vim
+
 " Fugitive
 if has("autocmd")
     augroup fugutiveAU
