@@ -24,9 +24,10 @@ Bundle 'godlygeek/tabular'
 Bundle 'sjl/threesome.vim.git'
 
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-git.git'
-Bundle 'Twinside/vim-haskellConceal.git'
-Bundle 'othree/html5.vim.git'
+Bundle 'tpope/vim-git'
+Bundle 'Twinside/vim-haskellConceal'
+Bundle 'othree/html5.vim'
+Bundle 'vim-scripts/indentpython.vim--nianyang'
 
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'vim-scripts/Zenburn.git'
