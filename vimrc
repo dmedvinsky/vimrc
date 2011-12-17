@@ -185,9 +185,17 @@ nnoremap <A-o> <C-w>o
 
 nnoremap Y y$
 
+nnoremap H ^
+nnoremap L g_
+nnoremap K <nop>
+
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
+
 " Center screen on search match
-nnoremap n nzz
-nnoremap N Nzz
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " Select just pasted text
 nnoremap <leader>v V`]
