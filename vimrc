@@ -307,6 +307,30 @@ command! -nargs=1 OpenURL :call OpenURL(<q-args>)
 nnoremap gG :OpenURL https://encrypted.google.com/search?q=<cword><CR>
 " }}}
 
+" Abbreviations {{{1
+function! EatChar(pat)
+    let c = nr2char(getchar(0))
+    return (c =~ a:pat) ? '' : c
+endfunction
+
+function! MakeSpacelessIabbrev(from, to)
+    execute "iabbrev <silent> ".a:from." ".a:to."<C-R>=EatChar('\\s')<CR>"
+endfunction
+
+call MakeSpacelessIabbrev('***', '*args, **kwargs')
+call MakeSpacelessIabbrev('pdb', 'import pdb; pdb.set_trace()')
+iabbrev dm@ dmedvinsky@gmail.com
+
+iab wekk week
+iab Wekk Week
+iab chage change
+iab Chage Change
+iab reutrn return
+iab reutn return
+iab reurn return
+iab labmda lambda
+" }}}
+
 
 if filereadable($HOME."/.vim/bundle/local/vimrc")
     set runtimepath+=$HOME/.vim/bundle/local/
