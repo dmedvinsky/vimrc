@@ -7,30 +7,32 @@ call vundle#rc()
 " Bundles {{{1
 Bundle 'gmarik/vundle'
 
+Bundle 'ervandew/supertab'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-flatfoot'
-Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-ragtag'
+Bundle 'sjl/threesome.vim'
+Bundle 'sjl/gundo.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'vim-scripts/camelcasemotion'
 Bundle 'godlygeek/tabular'
-Bundle 'sjl/threesome.vim.git'
+Bundle 'gregsexton/MatchTag'
+Bundle 'vim-scripts/camelcasemotion'
+Bundle 'vim-scripts/DirDiff.vim'
+Bundle 'vim-scripts/ReplaceWithRegister.git'
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
-Bundle 'Twinside/vim-haskellConceal'
 Bundle 'othree/html5.vim'
 Bundle 'vim-scripts/indentpython.vim--nianyang'
 
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'vim-scripts/Zenburn.git'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/Zenburn'
 " }}}1
 
 " Options {{{1
@@ -237,6 +239,8 @@ nnoremap <leader>a= :Tabularize /=<CR>
 vnoremap <leader>a= :Tabularize /=<CR>
 nnoremap <leader>a: :Tabularize /:\zs<CR>
 vnoremap <leader>a: :Tabularize /:\zs<CR>
+" Gundo
+nnoremap <F6> :GundoToggle<CR>
 
 " }}}1
 
