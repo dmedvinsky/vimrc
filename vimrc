@@ -39,6 +39,7 @@ filetype plugin indent on
 set novisualbell t_vb=
 set title
 set t_Co=256
+set ttyfast
 set lazyredraw         " Do not redraw buffer then executing macros etc.
 set mousehide
 
@@ -89,7 +90,16 @@ set foldlevel=20
 set wildmenu
 set wildcharm=<TAB>
 set wildmode=list:longest
-set wildignore=*.o,*~,*.pyc,*.pyo,.git,.svn,.hg,.env
+set wildignore+=.git,.hg,_darcs,.svn
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
+set wildignore+=*.pyc,*.pyo
+set wildignore+=*.hi
+set wildignore+=*.luac
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.spl
+set wildignore+=*.sw?
+set wildignore+=*.DS_Store?
 
 set nobackup
 set directory=$HOME/.vim/tmp
@@ -105,7 +115,12 @@ set fillchars=""  " Get rid of the silly characters in window separators
 set showcmd       " Show partial command (or visual selection size) in cmd line
 set cmdheight=2
 set laststatus=2
-set statusline=%1*%m%*%2*%r%*%f%=\ Col:%3*%03v%*\ Ln:%3*%03l%*/%3*%03L%*\ File:%{&filetype}/%{&fileformat}/%{&fileencoding}\ Char:%04b/0x%03B%*%<
+set statusline=%1*%m%*
+set statusline+=%2*%r%*
+set statusline+=%f%=
+set statusline+=\ Col:%3*%03v%*\ Ln:%3*%03l%*/%3*%03L%*
+set statusline+=\ File:%{&filetype}/%{&fileformat}/%{&fileencoding}
+set statusline+=\ Char:%04b/0x%03B%*%<
 
 set numberwidth=3
 set nonumber
