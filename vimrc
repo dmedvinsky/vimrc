@@ -160,6 +160,8 @@ let mapleader = ","
 let maplocalleader = "\\"
 set pastetoggle=<F12>
 
+nnoremap ; :
+
 inoremap jj <ESC>
 inoremap jk <ESC>
 inoremap kj <ESC>
