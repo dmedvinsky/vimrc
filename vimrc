@@ -274,11 +274,19 @@ if has("autocmd")
         autocmd!
         autocmd FileType vim setlocal foldmethod=marker
         autocmd FileType sh setlocal foldmethod=marker
+        autocmd FileType zsh setlocal foldmethod=marker
         autocmd FileType gitcommit setlocal spell
         autocmd FileType html,htmldjango setlocal sw=2 sts=2 ts=2 et
         autocmd FileType mail setlocal wrap
         autocmd FileType python setlocal nosmartindent
-    augroup END "}}}2
+        autocmd FileType lisp setlocal commentstring=;;%s
+    augroup END " }}}2
+
+    augroup Misc " {{{2
+        autocmd!
+        autocmd FocusLost * :wa
+        autocmd VimResized * exe "normal! \<c-w>="
+    augroup END " }}}2
 end
 " }}}1
 
