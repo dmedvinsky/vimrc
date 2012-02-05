@@ -30,6 +30,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
 Bundle 'othree/html5.vim'
 Bundle 'vim-scripts/indentpython.vim--nianyang'
+Bundle 'groenewege/vim-less'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Zenburn'
