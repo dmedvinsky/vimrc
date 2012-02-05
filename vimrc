@@ -8,7 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'ervandew/supertab'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-commentary'
@@ -24,7 +24,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'gregsexton/MatchTag'
 Bundle 'vim-scripts/camelcasemotion'
 Bundle 'vim-scripts/DirDiff.vim'
-Bundle 'vim-scripts/ReplaceWithRegister.git'
+Bundle 'vim-scripts/ReplaceWithRegister'
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
@@ -228,14 +228,13 @@ nnoremap <silent> <leader>hh :setl hls<CR>:let @/="\\<<C-r><C-w>\\>"<CR>
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>rv :source $MYVIMRC<cr>
 
+" Plugins
+let g:ctrlp_map = '<leader>t'
 
-" Command-T
-nnoremap <leader>t :CommandT<CR>
-" NERDTree
 nnoremap <leader>it :NERDTreeToggle<CR>
-" Surround
+
 nnoremap ys<space> ysl<space><space>
-" Fugitive
+
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
@@ -244,12 +243,12 @@ nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gr :Gread<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
 nnoremap <silent> <leader>gg :Ggrep <C-r><C-w><CR>
-" Tabular
+
 nnoremap <leader>a= :Tabularize /=<CR>
 vnoremap <leader>a= :Tabularize /=<CR>
 nnoremap <leader>a: :Tabularize /:\zs<CR>
 vnoremap <leader>a: :Tabularize /:\zs<CR>
-" Gundo
+
 nnoremap <F6> :GundoToggle<CR>
 
 " }}}1
@@ -267,6 +266,13 @@ if has("autocmd")
           \     nnoremap <buffer> .. :edit %:h<CR> |
           \ endif
     augroup END
+endif
+
+
+if has('win32')
+    let g:ctrlp_cache_dir = $TEMP.'/ctrlp'
+else
+    let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 endif
 " }}}1
 
