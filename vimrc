@@ -25,6 +25,8 @@ Bundle 'gregsexton/MatchTag'
 Bundle 'vim-scripts/camelcasemotion'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/ReplaceWithRegister'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
@@ -270,10 +272,14 @@ if has("autocmd")
 endif
 
 
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 if has('win32')
     let g:ctrlp_cache_dir = $TEMP.'/ctrlp'
-else
-    let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+endif
+
+let g:Powerline_symbols='compatible'
+if has('gui_running')
+    let g:Powerline_symbols='fancy'
 endif
 " }}}1
 
