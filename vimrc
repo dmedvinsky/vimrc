@@ -105,6 +105,7 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.spl
 set wildignore+=*.sw?
 set wildignore+=*.DS_Store?
+set wildignore+=*.mo
 
 set nobackup
 set directory=$HOME/.vim/tmp
