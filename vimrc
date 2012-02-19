@@ -229,8 +229,8 @@ nnoremap <leader>dh :silent nohlsearch<CR>
 " Highlight all instances of the current word under the cursor
 nnoremap <silent> <leader>hh :setl hls<CR>:let @/="\\<<C-r><C-w>\\>"<CR>
 
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-:nnoremap <leader>rv :source $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>rv :source $MYVIMRC<cr>
 
 " Plugins
 let g:ctrlp_map = '<leader>t'
