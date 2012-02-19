@@ -27,6 +27,7 @@ Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/ReplaceWithRegister'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'nvie/vim-flake8'
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
