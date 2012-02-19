@@ -37,6 +37,7 @@ Bundle 'groenewege/vim-less'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Zenburn'
+Bundle 'sjl/badwolf'
 " }}}1
 
 " Options {{{1
