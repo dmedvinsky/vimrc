@@ -325,6 +325,18 @@ function! OpenURL(url)
 endfunction
 command! -nargs=1 OpenURL :call OpenURL(<q-args>)
 nnoremap gG :OpenURL https://encrypted.google.com/search?q=<cword><CR>
+
+
+function! s:VSetSearch()
+  let temp = @@
+  norm! gvy
+  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  let @@ = temp
+endfunction
+
+vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR><c-o>
+vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR><c-o>
+
 " }}}
 
 " Abbreviations {{{1
