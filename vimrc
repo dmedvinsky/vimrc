@@ -29,6 +29,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nvie/vim-flake8'
 Bundle 'kana/vim-smartinput'
+Bundle 'dmedvinsky/uritality.vim'
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
