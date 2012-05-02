@@ -180,11 +180,17 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+nnoremap J <C-w><C-w>
+nnoremap K <C-w><C-p>
+nnoremap <left> <C-w>h
+nnoremap <right> <C-w>l
+nnoremap <up> <C-w>k
+nnoremap <down> <C-w>j
+
 nnoremap Y y$
 
 nnoremap H ^
 nnoremap L g_
-nnoremap K <nop>
 
 " Space to toggle folds.
 nnoremap <Space> za
