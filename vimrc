@@ -62,6 +62,7 @@ set backspace=indent,eol,start
 set nojoinspaces
 set formatoptions-=o          " Do not continue comments when pressing o/O
 set shellslash
+set autoread
 set autowrite
 
 set scrolljump=1
