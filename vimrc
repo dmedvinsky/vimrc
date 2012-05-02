@@ -231,6 +231,7 @@ nnoremap <leader>rv :source $MYVIMRC<cr>
 
 " Plugins
 let g:ctrlp_map = '<leader>t'
+let g:EasyMotion_leader_key = '<Space>'
 
 nnoremap <leader>it :NERDTreeToggle<CR>
 
