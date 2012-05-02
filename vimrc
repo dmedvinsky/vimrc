@@ -180,20 +180,6 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-nnoremap <A-H> <C-w>H
-nnoremap <A-J> <C-w>J
-nnoremap <A-K> <C-w>K
-nnoremap <A-L> <C-w>L
-nnoremap <A-c> <C-w>c
-nnoremap <A-v> <C-w>v
-nnoremap <A-s> <C-w>s
-nnoremap <A-w> <C-w>w
-nnoremap <A-o> <C-w>o
-
 nnoremap Y y$
 
 nnoremap H ^
