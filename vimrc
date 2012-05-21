@@ -281,6 +281,9 @@ let g:Powerline_symbols='compatible'
 if has('gui_running')
     let g:Powerline_symbols='fancy'
 endif
+
+let g:uritality_color_insert = "#d9cec3"
+let g:uritality_color_normal = "#aeee00"
 " }}}1
 
 " Autocommands {{{1
