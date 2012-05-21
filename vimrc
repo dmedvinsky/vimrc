@@ -36,6 +36,7 @@ Bundle 'tpope/vim-git'
 Bundle 'othree/html5.vim'
 Bundle 'vim-scripts/indentpython.vim--nianyang'
 Bundle 'groenewege/vim-less'
+Bundle 'wavded/vim-stylus'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Zenburn'
