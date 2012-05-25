@@ -298,6 +298,7 @@ if has("autocmd")
         autocmd FileType python setlocal nosmartindent
         autocmd FileType lisp setlocal commentstring=;;%s
         autocmd FileType css,less setlocal tw=0
+        autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
     augroup END " }}}2
 
     augroup Misc " {{{2
