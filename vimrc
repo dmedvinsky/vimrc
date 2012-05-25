@@ -182,17 +182,15 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-nnoremap J <C-w><C-w>
-nnoremap K <C-w><C-p>
+nnoremap H <C-w>h
+nnoremap L <C-w>l
+nnoremap K <C-w><C-w>
 nnoremap <left> <C-w>h
 nnoremap <right> <C-w>l
 nnoremap <up> <C-w>k
 nnoremap <down> <C-w>j
 
 nnoremap Y y$
-
-nnoremap H ^
-nnoremap L g_
 
 " Space to toggle folds.
 nnoremap <Space> za
