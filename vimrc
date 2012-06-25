@@ -120,6 +120,7 @@ set nobackup
 set directory=$HOME/.vim/tmp
 set viminfo='128,/32,:32,<64,@32,s10,h,n$HOME/.vim/viminfo
 set sessionoptions=blank,buffers,curdir,slash,tabpages,unix
+set cryptmethod=blowfish
 
 set diffopt+=iwhite
 
