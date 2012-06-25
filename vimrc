@@ -47,6 +47,8 @@ Bundle 'sjl/badwolf'
 " Options {{{1
 filetype plugin indent on
 
+set shell=/bin/bash
+
 set novisualbell t_vb=
 set title
 set t_Co=256
