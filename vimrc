@@ -296,12 +296,12 @@ if has("autocmd")
         autocmd FileType sh setlocal foldmethod=marker
         autocmd FileType zsh setlocal foldmethod=marker
         autocmd FileType gitcommit setlocal spell
-        autocmd FileType html,htmldjango setlocal sw=2 sts=2 ts=2 et tw=0
+        autocmd FileType html,htmldjango,eco,yaml,coffee setlocal sw=2 sts=2 ts=2 et tw=0
         autocmd FileType mail setlocal wrap
         autocmd FileType python setlocal nosmartindent
         autocmd FileType lisp setlocal commentstring=;;%s
         autocmd FileType css,less setlocal tw=0
-        autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
+        autocmd BufNewFile,BufRead *.sls setfiletype yaml
     augroup END " }}}2
 
     augroup Misc " {{{2
