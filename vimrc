@@ -195,9 +195,12 @@ nnoremap <down> <C-w>j
 
 nnoremap Y y$
 
-" Space to toggle folds.
-nnoremap <Space> za
-vnoremap <Space> za
+" - to toggle folds.
+nnoremap - za
+vnoremap - za
+" nnoremap _
+" nnoremap +
+" nnoremap <BS>
 
 " Center screen on search match
 nnoremap n nzzzv
@@ -281,7 +284,7 @@ endif
 
 let g:Powerline_symbols='compatible'
 if has('gui_running')
-    let g:Powerline_symbols='fancy'
+    " let g:Powerline_symbols='fancy'
 endif
 
 let g:uritality_color_insert = "#d9cec3"
