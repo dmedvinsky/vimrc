@@ -162,7 +162,7 @@ if has('gui_running') " {{{2
     set guicursor+=r-cr:hor20-Cursor
     set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon17
 
-    set guifont=DejaVu\ Sans\ Mono\ 10
+    set guifont=Ubuntu\ Mono
 endif " }}}2
 
 syntax on
