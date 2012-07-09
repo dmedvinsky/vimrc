@@ -260,6 +260,7 @@ nnoremap <leader>a: :Tabularize /:\zs<CR>
 vnoremap <leader>a: :Tabularize /:\zs<CR>
 
 nnoremap <F6> :GundoToggle<CR>
+nnoremap <F7> :SyntasticCheck<CR>
 
 " }}}1
 
@@ -278,7 +279,6 @@ if has("autocmd")
     augroup END
 endif
 
-
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 if has('win32')
     let g:ctrlp_cache_dir = $TEMP.'/ctrlp'
@@ -291,6 +291,10 @@ endif
 
 let g:uritality_color_insert = "#d9cec3"
 let g:uritality_color_normal = "#aeee00"
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['java'] }
 " }}}1
 
 " Autocommands {{{1
