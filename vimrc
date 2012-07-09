@@ -200,8 +200,8 @@ nnoremap Y y$
 " - to toggle folds.
 nnoremap - za
 vnoremap - za
-" nnoremap _
-" nnoremap +
+nnoremap _ zM
+nnoremap + zR
 " nnoremap <BS>
 
 " Center screen on search match
