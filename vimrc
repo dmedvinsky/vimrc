@@ -115,6 +115,8 @@ set wildignore+=*.spl
 set wildignore+=*.sw?
 set wildignore+=*.DS_Store?
 set wildignore+=*.mo
+set wildignore+=node_modules
+set wildignore+=env
 
 set nobackup
 set directory=$HOME/.vim/tmp
