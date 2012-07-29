@@ -17,27 +17,22 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-ragtag'
-Bundle 'sjl/splice.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-scripts/camelcasemotion'
+Bundle 'vim-scripts/ReplaceWithRegister'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'godlygeek/tabular'
 Bundle 'gregsexton/MatchTag'
-Bundle 'vim-scripts/camelcasemotion'
-Bundle 'vim-scripts/DirDiff.vim'
-Bundle 'vim-scripts/ReplaceWithRegister'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'nvie/vim-flake8'
-" Bundle 'kana/vim-smartinput'
-" Bundle 'dmedvinsky/uritality.vim'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'coderifous/textobj-word-column.vim'
 
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-git'
 Bundle 'othree/html5.vim'
-Bundle 'vim-scripts/indentpython.vim--nianyang'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'wavded/vim-stylus'
+Bundle 'vim-scripts/indentpython.vim--nianyang'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Zenburn'
@@ -53,7 +48,7 @@ set novisualbell t_vb=
 set title
 set t_Co=256
 set ttyfast
-set lazyredraw         " Do not redraw buffer then executing macros etc.
+set lazyredraw        " Do not redraw buffer then executing macros etc.
 set mousehide
 
 set termencoding=utf-8
@@ -64,7 +59,7 @@ set hidden
 set virtualedit=all
 set backspace=indent,eol,start
 set nojoinspaces
-set formatoptions-=o          " Do not continue comments when pressing o/O
+set formatoptions-=o  " Do not continue comments when pressing o/O
 set shellslash
 set autoread
 set autowrite
@@ -187,6 +182,8 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+nnoremap / /\v
+
 nnoremap H <C-w>h
 nnoremap L <C-w>l
 nnoremap K <C-w><C-w>
@@ -210,6 +207,9 @@ nnoremap N Nzzzv
 
 " Select just pasted text
 nnoremap <leader>v V`]
+
+" Paste in visual mode without losing register content
+xnoremap <expr> p v:register=='"'?'pgvy':'p'
 
 " Allow command line editing like emacs
 cnoremap <C-A> <Home>
@@ -286,7 +286,7 @@ endif
 
 let g:Powerline_symbols='compatible'
 if has('gui_running')
-    " let g:Powerline_symbols='fancy'
+    let g:Powerline_symbols='fancy'
 endif
 
 let g:uritality_color_insert = "#d9cec3"
@@ -375,7 +375,7 @@ iab labmda lambda
 " }}}
 
 
-if filereadable($HOME."/.vim/bundle/local/vimrc")
-    set runtimepath+=$HOME/.vim/bundle/local/
-    source $HOME/.vim/bundle/local/vimrc
+if filereadable($HOME."/.vim/local/vimrc")
+    set runtimepath+=$HOME/.vim/local/
+    source $HOME/.vim/local/vimrc
 endif
