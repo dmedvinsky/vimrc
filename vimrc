@@ -372,6 +372,7 @@ iab reutrn return
 iab reutn return
 iab reurn return
 iab labmda lambda
+iab consoel console
 " }}}
 
 
